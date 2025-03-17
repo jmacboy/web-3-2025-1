@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="">
+    {% csrf_token %}
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre">
+    <br>
+    <label for="apellido">Apellido</label>
+    <input type="text" name="apellido" id="apellido">
+    <br>
+    <label for="registro">Registro</label>
+    <input type="text" name="registro" id="registro">
+    <br>
+    <label for="ciudad">Ciudad</label>
+    <input type="text" name="ciudad" id="ciudad">
+    <br>
+    <label for="edad">Edad</label>
+    <input type="text" name="edad" id="edad">
+    <br>
+    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+    <input type="text" name="fecha_nacimiento" id="fecha_nacimiento">
+    <br>
+    <input type="submit" value="Guardar">
+</form>
+</body>
+</html>
