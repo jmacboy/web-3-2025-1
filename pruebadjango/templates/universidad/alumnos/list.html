@@ -15,6 +15,7 @@
         <th>Ciudad</th>
         <th>Edad</th>
         <th>Fecha de Nacimiento</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -27,6 +28,15 @@
             <td> {{ alumno.ciudad }}</td>
             <td> {{ alumno.edad }}</td>
             <td> {{ alumno.fecha_nacimiento }}</td>
+            <td>
+                <a href="{% url "alumnosupdate" alumno.id %}">Editar</a>
+            </td>
+            <td>
+                <form action="{% url "alumnosdelete" alumno.id %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Eliminar">
+                </form>
+            </td>
         </tr>
     {% endfor %}
 

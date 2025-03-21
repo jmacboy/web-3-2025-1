@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Créditos</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for materia in materias %}
+        <tr>
+            <td> {{ materia.id }}</td>
+            <td> {{ materia.nombre }}</td>
+            <td> {{ materia.creditos }}</td>
+            <td>
+                <a href="{% url "materias_edit" materia.id %}">Editar</a>
+            </td>
+            <td>
+                <form action="{% url "materias_delete" materia.id %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Eliminar">
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+</body>
+</html>

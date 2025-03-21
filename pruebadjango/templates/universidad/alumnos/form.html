@@ -8,22 +8,22 @@
 <form method="post" action="">
     {% csrf_token %}
     <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" id="nombre">
+    <input type="text" name="nombre" id="nombre" value="{{ alumno.nombre }}">
     <br>
     <label for="apellido">Apellido</label>
-    <input type="text" name="apellido" id="apellido">
+    <input type="text" name="apellido" id="apellido" value="{{ alumno.apellido }}">
     <br>
     <label for="registro">Registro</label>
-    <input type="text" name="registro" id="registro">
+    <input type="text" name="registro" id="registro" value="{{ alumno.registro }}">
     <br>
     <label for="ciudad">Ciudad</label>
-    <input type="text" name="ciudad" id="ciudad">
+    <input type="text" name="ciudad" id="ciudad" value="{{ alumno.ciudad }}">
     <br>
     <label for="edad">Edad</label>
-    <input type="text" name="edad" id="edad">
+    <input type="text" name="edad" id="edad" value="{{ alumno.edad }}">
     <br>
     <label for="fecha_nacimiento">Fecha de Nacimiento</label>
-    <input type="text" name="fecha_nacimiento" id="fecha_nacimiento">
+    <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" value="{{ alumno.fecha_nacimiento | date:"Y-m-d" }}">
     <br>
     <input type="submit" value="Guardar">
 </form>
