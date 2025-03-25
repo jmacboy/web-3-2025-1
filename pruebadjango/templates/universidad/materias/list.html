@@ -13,6 +13,7 @@
                                 <th>Id</th>
                                 <th>Nombre</th>
                                 <th>Créditos</th>
+                                <th>Docente</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -23,8 +24,10 @@
                                     <td> {{ materia.id }}</td>
                                     <td> {{ materia.nombre }}</td>
                                     <td> {{ materia.creditos }}</td>
+                                    <td> {{ materia.docente.nombres }} {{ materia.docente.apellidos }}</td>
                                     <td>
-                                        <a class="btn btn-primary" href="{% url "materias_edit" materia.id %}">Editar</a>
+                                        <a class="btn btn-primary"
+                                           href="{% url "materias_edit" materia.id %}">Editar</a>
                                     </td>
                                     <td>
                                         <form action="{% url "materias_delete" materia.id %}" method="post">

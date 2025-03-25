@@ -17,6 +17,8 @@
                                 <th>Ciudad</th>
                                 <th>Edad</th>
                                 <th>Fecha de Nacimiento</th>
+                                <th>Materias inscritas</th>
+                                <th>Datos de contacto</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -31,6 +33,17 @@
                                     <td> {{ alumno.ciudad }}</td>
                                     <td> {{ alumno.edad }}</td>
                                     <td> {{ alumno.fecha_nacimiento }}</td>
+                                    <td>
+                                        {% for materia in alumno.materias_inscritas.all %}
+                                            <div>
+                                                {{ materia.nombre }}
+                                            </div>
+                                        {% endfor %}
+                                    </td>
+                                    <td>
+                                        <div><b>Dirección:</b> {{ alumno.perfil.direccion }}</div>
+                                        <div><b>Teléfono:</b> {{ alumno.perfil.telefono }}</div>
+                                    </td>
                                     <td>
                                         <a class="btn btn-primary" href="{% url "alumnosupdate" alumno.id %}">Editar</a>
                                     </td>

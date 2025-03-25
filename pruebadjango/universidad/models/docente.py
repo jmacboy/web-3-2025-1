@@ -7,3 +7,6 @@ class Docente(models.Model):
     edad = models.IntegerField()
     ci = models.CharField(max_length=10)
     fecha_nacimiento = models.DateField()
+
+    def __str__(self):
+        return f"{self.nombres} {self.apellidos}"

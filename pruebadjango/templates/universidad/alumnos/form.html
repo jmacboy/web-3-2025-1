@@ -10,16 +10,20 @@
                         <form method="post" action="">
                             {% csrf_token %}
                             <label for="nombre">Nombre</label>
-                            <input class="form-control" type="text" name="nombre" id="nombre" value="{{ alumno.nombre }}">
+                            <input class="form-control" type="text" name="nombre" id="nombre"
+                                   value="{{ alumno.nombre }}">
                             <br>
                             <label for="apellido">Apellido</label>
-                            <input class="form-control" type="text" name="apellido" id="apellido" value="{{ alumno.apellido }}">
+                            <input class="form-control" type="text" name="apellido" id="apellido"
+                                   value="{{ alumno.apellido }}">
                             <br>
                             <label for="registro">Registro</label>
-                            <input class="form-control" type="text" name="registro" id="registro" value="{{ alumno.registro }}">
+                            <input class="form-control" type="text" name="registro" id="registro"
+                                   value="{{ alumno.registro }}">
                             <br>
                             <label for="ciudad">Ciudad</label>
-                            <input class="form-control" type="text" name="ciudad" id="ciudad" value="{{ alumno.ciudad }}">
+                            <input class="form-control" type="text" name="ciudad" id="ciudad"
+                                   value="{{ alumno.ciudad }}">
                             <br>
                             <label for="edad">Edad</label>
                             <input class="form-control" type="text" name="edad" id="edad" value="{{ alumno.edad }}">
@@ -28,6 +32,28 @@
                             <input class="form-control" type="date" name="fecha_nacimiento" id="fecha_nacimiento"
                                    value="{{ alumno.fecha_nacimiento | date:"Y-m-d" }}">
                             <br>
+                            <label for="direccion">Dirección</label>
+                            <input class="form-control" type="text" name="direccion" id="direccion"
+                                   value="{{ alumno.perfil.direccion }}">
+                            <br>
+                            <label for="telefono">Teléfono</label>
+                            <input class="form-control" type="text" name="telefono" id="telefono"
+                                   value="{{ alumno.perfil.telefono }}">
+                            <div class="mt-2">
+                                <label>Materias inscritas</label>
+                                <div>
+
+                                    {% for materia in materias %}
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="materias_inscritas"
+                                                   value="{{ materia.id }}" id="checkMateria{{ materia.id }}"
+                                                    {% if materia.is_selected %} checked {% endif %}/>
+                                            <label class="form-check-label"
+                                                   for="checkMateria{{ materia.id }}">{{ materia.nombre }}</label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
                             <input class="btn btn-primary" type="submit" value="Guardar">
                         </form>
                     </div>
