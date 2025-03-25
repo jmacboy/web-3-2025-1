@@ -1,46 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<table>
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Registro</th>
-        <th>Ciudad</th>
-        <th>Edad</th>
-        <th>Fecha de Nacimiento</th>
-        <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for alumno in alumnos %}
-        <tr>
-            <td> {{ alumno.id }}</td>
-            <td> {{ alumno.nombre }}</td>
-            <td> {{ alumno.apellido }}</td>
-            <td> {{ alumno.registro }}</td>
-            <td> {{ alumno.ciudad }}</td>
-            <td> {{ alumno.edad }}</td>
-            <td> {{ alumno.fecha_nacimiento }}</td>
-            <td>
-                <a href="{% url "alumnosupdate" alumno.id %}">Editar</a>
-            </td>
-            <td>
-                <form action="{% url "alumnosdelete" alumno.id %}" method="post">
-                    {% csrf_token %}
-                    <input type="submit" value="Eliminar">
-                </form>
-            </td>
-        </tr>
-    {% endfor %}
+{% extends "universidad/base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <div class="card-title">Lista de Personas</div>
 
-    </tbody>
-</table>
-</body>
-</html>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Registro</th>
+                                <th>Ciudad</th>
+                                <th>Edad</th>
+                                <th>Fecha de Nacimiento</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for alumno in alumnos %}
+                                <tr>
+                                    <td> {{ alumno.id }}</td>
+                                    <td> {{ alumno.nombre }}</td>
+                                    <td> {{ alumno.apellido }}</td>
+                                    <td> {{ alumno.registro }}</td>
+                                    <td> {{ alumno.ciudad }}</td>
+                                    <td> {{ alumno.edad }}</td>
+                                    <td> {{ alumno.fecha_nacimiento }}</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="{% url "alumnosupdate" alumno.id %}">Editar</a>
+                                    </td>
+                                    <td>
+                                        <form action="{% url "alumnosdelete" alumno.id %}" method="post">
+                                            {% csrf_token %}
+                                            <input class="btn btn-danger" type="submit" value="Eliminar">
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

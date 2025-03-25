@@ -5,29 +5,35 @@
             <div class="col">
                 <div class="card mt-2">
                     <div class="card-body">
-                        <div class="card-title">Lista de Materias</div>
+                        <div class="card-title">Lista de docentes</div>
 
                         <table class="table">
                             <thead>
                             <tr>
                                 <th>Id</th>
                                 <th>Nombre</th>
-                                <th>Créditos</th>
+                                <th>Apellidos</th>
+                                <th>Edad</th>
+                                <th>Ci</th>
+                                <th>Fecha de Nacimiento</th>
                                 <th></th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
-                            {% for materia in materias %}
+                            {% for docente in docente_list %}
                                 <tr>
-                                    <td> {{ materia.id }}</td>
-                                    <td> {{ materia.nombre }}</td>
-                                    <td> {{ materia.creditos }}</td>
+                                    <td> {{ docente.id }}</td>
+                                    <td> {{ docente.nombres }}</td>
+                                    <td> {{ docente.apellidos }}</td>
+                                    <td> {{ docente.edad }}</td>
+                                    <td> {{ docente.ci }}</td>
+                                    <td> {{ docente.fecha_nacimiento }}</td>
                                     <td>
-                                        <a class="btn btn-primary" href="{% url "materias_edit" materia.id %}">Editar</a>
+                                        <a class="btn btn-primary" href="{% url "docentes_edit" docente.id %}">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="{% url "materias_delete" materia.id %}" method="post">
+                                        <form action="{% url "docentes_delete" docente.id %}" method="post">
                                             {% csrf_token %}
                                             <input class="btn btn-danger" type="submit" value="Eliminar">
                                         </form>
