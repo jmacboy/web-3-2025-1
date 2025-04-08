@@ -13,4 +13,15 @@ export class MateriaService {
                 })
         })
     }
+    insertMateria(materia: Materia): Promise<Materia> {
+        return new Promise<Materia>((resolve, reject) => {
+            axios.post("http://localhost:8000/universidad/materias/", materia)
+                .then((response) => {
+                    resolve(response.data)
+                })
+                .catch((error) => {
+                    reject(new Error("Error al insertar la materia: " + error.message))
+                })
+        })
+    }
 }
