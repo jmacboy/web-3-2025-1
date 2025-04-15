@@ -5,8 +5,9 @@ import { Card } from '../components/Card';
 import { Button } from "../components/Button";
 import { MateriaService } from "../services/MateriaService";
 import { Materia } from "../models/Materia";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { URLS } from "../navigation/CONTANTS";
+import { useEffect } from "react";
 
 type Inputs = {
     nombre: string
@@ -15,19 +16,41 @@ type Inputs = {
 }
 export const MateriaForm = () => {
     const navigate = useNavigate()
+    const { id } = useParams<{ id: string }>();
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm<Inputs>()
     const onSubmit: SubmitHandler<Inputs> = (data) => {
         console.log(data)
         const materia: Materia = {
-            id: 0,
+            id: id ? id : "",
             nombre: data.nombre,
             codigo: data.codigo,
             creditos: data.creditos
         }
+        if (id) {
+            updateMateria(materia)
+        } else {
+            insertMateria(materia)
+        }
+
+    }
+    const updateMateria = (materia: Materia) => {
+        new MateriaService()
+            .updateMateria(materia)
+            .then(() => {
+                navigate(URLS.HOME)
+            })
+            .catch((error) => {
+                console.error("Error al actualizar la materia: ", error)
+                alert("Error al actualizar materia, intente nuevamente");
+            });
+    }
+
+    const insertMateria = (materia: Materia) => {
         new MateriaService()
             .insertMateria(materia)
             .then(() => {
@@ -38,6 +61,26 @@ export const MateriaForm = () => {
                 alert("Error al insertar materia, intente nuevamente");
             });
     }
+
+    const loadMateria = async () => {
+        new MateriaService()
+            .getMateria(id!)
+            .then((response) => {
+                reset({
+                    nombre: response.nombre,
+                    codigo: response.codigo,
+                    creditos: response.creditos
+                })
+            });
+    }
+    useEffect(() => {
+        if (!id) {
+            return;
+        }
+        loadMateria();
+
+    }, [id])
+
     return (
         <div>
             <Card title="Formulario Materia" className="mx-5 my-5">

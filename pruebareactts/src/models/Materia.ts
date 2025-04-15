@@ -1,5 +1,5 @@
 export interface Materia {
-    id: number;
+    id: string;
     nombre: string;
     codigo: string;
     creditos: number;
