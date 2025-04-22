@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router";
 import MaterialList from "../pages/MateriaList";
 import { MateriaForm } from "../pages/MateriaForm";
 import { URLS } from "./CONTANTS";
+import AlumnoList from "../pages/AlumnoList";
+import { AlumnoForm } from "../pages/AlumnoForm";
 
 const RouterConfig = () => {
     return (
@@ -9,6 +11,9 @@ const RouterConfig = () => {
             <Route path={URLS.HOME} element={< MaterialList />} />
             <Route path={URLS.MATERIAS.CREATE} element={< MateriaForm />} />
             <Route path={URLS.MATERIAS.EDIT} element={< MateriaForm />} />
+            <Route path={URLS.ALUMNOS.LIST} element={< AlumnoList />} />
+            <Route path={URLS.ALUMNOS.CREATE} element={< AlumnoForm />} />
+            <Route path={URLS.ALUMNOS.EDIT} element={< AlumnoForm />} />
         </Routes>
     );
 }

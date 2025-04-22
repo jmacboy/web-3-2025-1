@@ -6,5 +6,13 @@ export const URLS = {
         UPDATE: (id: string) => {
             return `/materias/${id}`
         }
+    },
+    ALUMNOS: {
+        LIST: '/alumnos',
+        CREATE: '/alumnos/create',
+        EDIT: "/alumnos/:id",
+        UPDATE: (id: string) => {
+            return `/alumnos/${id}`
+        }
     }
 }
