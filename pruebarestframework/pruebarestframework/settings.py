@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "corsheaders",
     'rest_framework',
+    "rest_framework_api_key",
     'universidad'
 ]
 
@@ -103,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+API_KEY_CUSTOM_HEADER = "HTTP_X_API_KEY"
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

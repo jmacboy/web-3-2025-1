@@ -1,5 +1,6 @@
 from rest_framework import serializers, viewsets
 from rest_framework.permissions import IsAuthenticated
+from rest_framework_api_key.permissions import HasAPIKey
 
 from universidad.models import Alumno
 
@@ -11,6 +12,6 @@ class AlumnoSerializer(serializers.ModelSerializer):
 
 
 class AlumnoViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [HasAPIKey | IsAuthenticated]
     queryset = Alumno.objects.all()
     serializer_class = AlumnoSerializer
