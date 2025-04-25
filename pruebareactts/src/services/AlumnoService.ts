@@ -1,4 +1,3 @@
-import axios from "axios"
 import { Alumno } from "../models/Alumno"
 import apiClient from "./interceptors"
 

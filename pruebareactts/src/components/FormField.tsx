@@ -3,7 +3,7 @@ type Props = {
 }
 export const FormField = ({ children }: Props) => {
     return (
-        <div className="my-2">
+        <div className="my-2 formfield">
             {children}
         </div>
     );

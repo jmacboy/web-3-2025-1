@@ -1,5 +1,7 @@
 export const URLS = {
     HOME: '/',
+    LOGIN: '/login',
+    REGISTER: '/register',
     MATERIAS: {
         CREATE: '/materias/create',
         EDIT: "/materias/:id",

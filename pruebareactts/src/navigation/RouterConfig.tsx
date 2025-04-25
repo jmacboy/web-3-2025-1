@@ -4,6 +4,8 @@ import { MateriaForm } from "../pages/MateriaForm";
 import { URLS } from "./CONTANTS";
 import AlumnoList from "../pages/AlumnoList";
 import { AlumnoForm } from "../pages/AlumnoForm";
+import { LoginForm } from "../pages/LoginForm";
+import { RegisterForm } from "../pages/RegisterForm";
 
 const RouterConfig = () => {
     return (
@@ -14,6 +16,8 @@ const RouterConfig = () => {
             <Route path={URLS.ALUMNOS.LIST} element={< AlumnoList />} />
             <Route path={URLS.ALUMNOS.CREATE} element={< AlumnoForm />} />
             <Route path={URLS.ALUMNOS.EDIT} element={< AlumnoForm />} />
+            <Route path={URLS.LOGIN} element={< LoginForm />} />
+            <Route path={URLS.REGISTER} element={< RegisterForm />} />
         </Routes>
     );
 }

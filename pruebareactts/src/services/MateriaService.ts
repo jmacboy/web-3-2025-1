@@ -1,4 +1,3 @@
-import axios from "axios"
 import { Materia } from "../models/Materia"
 import apiClient from "./interceptors"
 
