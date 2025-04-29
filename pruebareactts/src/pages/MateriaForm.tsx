@@ -8,6 +8,9 @@ import { Materia } from "../models/Materia";
 import { useNavigate, useParams } from "react-router";
 import { URLS } from "../navigation/CONTANTS";
 import { useEffect } from "react";
+import { Menu } from "../components/Menu";
+import { Container } from "../components/Container";
+import { useAuth } from "../hooks/useAuth";
 
 type Inputs = {
     nombre: string
@@ -16,6 +19,8 @@ type Inputs = {
 }
 export const MateriaForm = () => {
     const navigate = useNavigate()
+    useAuth()
+
     const { id } = useParams<{ id: string }>();
     const {
         register,
@@ -81,8 +86,9 @@ export const MateriaForm = () => {
 
     }, [id])
 
-    return (
-        <div>
+    return (<>
+        <Menu />
+        <Container>
             <Card title="Formulario Materia" className="mx-5 my-5">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <FormField>
@@ -103,6 +109,7 @@ export const MateriaForm = () => {
                     <Button type="submit" title="Guardar" />
                 </form>
             </Card>
-        </div>
+        </Container>
+    </>
     );
 }

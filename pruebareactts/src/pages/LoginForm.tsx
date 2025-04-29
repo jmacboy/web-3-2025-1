@@ -7,6 +7,10 @@ import { useNavigate } from "react-router";
 import { URLS } from "../navigation/CONTANTS";
 import { LoginRequest } from "../models/dto/LoginRequest";
 import { AuthService } from "../services/AuthService";
+import { useAppDispatch } from "../redux/hooks";
+import { loginUser } from "../redux/slices/authSlice";
+import { Container } from "../components/Container";
+import { useAuth } from "../hooks/useAuth";
 
 type Inputs = {
     email: string
@@ -14,6 +18,8 @@ type Inputs = {
 }
 export const LoginForm = () => {
     const navigate = useNavigate()
+    const { doLogin } = useAuth()
+
     const {
         register,
         handleSubmit,
@@ -29,14 +35,17 @@ export const LoginForm = () => {
             .login(login.username, login.password)
             .then((response) => {
                 console.log("Login successful", response)
-                localStorage.setItem("access_token", response.access);
-                localStorage.setItem("refresh_token", response.refresh);
+                doLogin({
+                    access_token: response.access,
+                    refresh_token: response.refresh,
+                    email: login.username
+                })
                 navigate(URLS.HOME)
             })
     }
 
     return (
-        <div>
+        <Container>
             <Card title="Iniciar sesión" className="mx-5 my-5">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <FormField>
@@ -52,6 +61,6 @@ export const LoginForm = () => {
                     <Button type="submit" title="Guardar" />
                 </form>
             </Card>
-        </div>
+        </Container>
     );
 }

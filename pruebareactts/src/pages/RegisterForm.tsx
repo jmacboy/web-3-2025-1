@@ -5,9 +5,9 @@ import { Card } from '../components/Card';
 import { Button } from "../components/Button";
 import { useNavigate } from "react-router";
 import { URLS } from "../navigation/CONTANTS";
-import { LoginRequest } from "../models/dto/LoginRequest";
 import { AuthService } from "../services/AuthService";
 import { RegisterRequest } from "../models/dto/RegisterRequest";
+import { Container } from "../components/Container";
 
 type Inputs = {
     email: string
@@ -35,7 +35,7 @@ export const RegisterForm = () => {
     }
 
     return (
-        <div>
+        <Container>
             <Card title="Registro" className="mx-5 my-5">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <FormField>
@@ -51,6 +51,6 @@ export const RegisterForm = () => {
                     <Button type="submit" title="Guardar" />
                 </form>
             </Card>
-        </div>
+        </Container>
     );
 }

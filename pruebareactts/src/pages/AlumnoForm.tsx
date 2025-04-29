@@ -8,6 +8,9 @@ import { Alumno } from "../models/Alumno";
 import { useNavigate, useParams } from "react-router";
 import { URLS } from "../navigation/CONTANTS";
 import { useEffect } from "react";
+import { Menu } from "../components/Menu";
+import { Container } from "../components/Container";
+import { useAuth } from "../hooks/useAuth";
 
 type Inputs = {
     nombres: string
@@ -18,6 +21,7 @@ type Inputs = {
 }
 export const AlumnoForm = () => {
     const navigate = useNavigate()
+    useAuth()
     const { id } = useParams<{ id: string }>();
     const {
         register,
@@ -88,37 +92,41 @@ export const AlumnoForm = () => {
     }, [id])
 
     return (
-        <div>
-            <Card title="Formulario Alumno" className="mx-5 my-5">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <FormField>
-                        <label htmlFor="nombres">Nombres:</label>
-                        <Input id="nombres" {...register("nombres", { required: true })} />
-                        {errors.nombres && <span>Este campo es requerido</span>}
-                    </FormField>
-                    <FormField>
-                        <label htmlFor="apellidos">Apellidos:</label>
-                        <Input id="apellidos" {...register("apellidos", { required: true })} />
-                        {errors.apellidos && <span>Este campo es requerido</span>}
-                    </FormField>
-                    <FormField>
-                        <label htmlFor="edad">Edad:</label>
-                        <Input id="edad" type="number" {...register("edad", { required: true })} />
-                        {errors.edad && <span>Este campo es requerido</span>}
-                    </FormField>
-                    <FormField>
-                        <label htmlFor="fecha_nacimiento">Fecha de Nacimiento:</label>
-                        <Input id="fecha_nacimiento" type="date" {...register("fecha_nacimiento", { required: true })} />
-                        {errors.fecha_nacimiento && <span>Este campo es requerido</span>}
-                    </FormField>
-                    <FormField>
-                        <label htmlFor="registro">Registro:</label>
-                        <Input id="registro" type="text" {...register("registro", { required: true })} />
-                        {errors.registro && <span>Este campo es requerido</span>}
-                    </FormField>
-                    <Button type="submit" title="Guardar" />
-                </form>
-            </Card>
-        </div>
+        <>
+            <Menu />
+
+            <Container>
+                <Card title="Formulario Alumno" className="mx-5 my-5">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <FormField>
+                            <label htmlFor="nombres">Nombres:</label>
+                            <Input id="nombres" {...register("nombres", { required: true })} />
+                            {errors.nombres && <span>Este campo es requerido</span>}
+                        </FormField>
+                        <FormField>
+                            <label htmlFor="apellidos">Apellidos:</label>
+                            <Input id="apellidos" {...register("apellidos", { required: true })} />
+                            {errors.apellidos && <span>Este campo es requerido</span>}
+                        </FormField>
+                        <FormField>
+                            <label htmlFor="edad">Edad:</label>
+                            <Input id="edad" type="number" {...register("edad", { required: true })} />
+                            {errors.edad && <span>Este campo es requerido</span>}
+                        </FormField>
+                        <FormField>
+                            <label htmlFor="fecha_nacimiento">Fecha de Nacimiento:</label>
+                            <Input id="fecha_nacimiento" type="date" {...register("fecha_nacimiento", { required: true })} />
+                            {errors.fecha_nacimiento && <span>Este campo es requerido</span>}
+                        </FormField>
+                        <FormField>
+                            <label htmlFor="registro">Registro:</label>
+                            <Input id="registro" type="text" {...register("registro", { required: true })} />
+                            {errors.registro && <span>Este campo es requerido</span>}
+                        </FormField>
+                        <Button type="submit" title="Guardar" />
+                    </form>
+                </Card>
+            </Container>
+        </>
     );
 }
