@@ -43,7 +43,7 @@ export class AuthService {
     }
     me(): Promise<UserInfoResponse> {
         return new Promise<UserInfoResponse>((resolve, reject) => {
-            apiClient.get("auth/me/").then((response) => {
+            apiClient.get("usuarios/me/").then((response) => {
                 resolve(response.data)
             }).catch((error) => {
                 reject(new Error("Error al obtener la información del usuario: " + error.message))

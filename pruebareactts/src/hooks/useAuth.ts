@@ -24,7 +24,7 @@ export const useAuth = () => {
         new AuthService()
             .me()
             .then((response) => {
-                console.log("User data", response)
+                // console.log("User data", response)
                 if (response.email) {
                     dispatch(loginUser(response.email))
                 }

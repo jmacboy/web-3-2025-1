@@ -7,10 +7,9 @@ import { useNavigate } from "react-router";
 import { URLS } from "../navigation/CONTANTS";
 import { LoginRequest } from "../models/dto/LoginRequest";
 import { AuthService } from "../services/AuthService";
-import { useAppDispatch } from "../redux/hooks";
-import { loginUser } from "../redux/slices/authSlice";
 import { Container } from "../components/Container";
 import { useAuth } from "../hooks/useAuth";
+import { GuestMenu } from "../components/GuestMenu";
 
 type Inputs = {
     email: string
@@ -45,22 +44,26 @@ export const LoginForm = () => {
     }
 
     return (
-        <Container>
-            <Card title="Iniciar sesión" className="mx-5 my-5">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <FormField>
-                        <label htmlFor="email">Email:</label>
-                        <Input type="text" id="email" {...register("email", { required: true })} />
-                        {errors.email && <span>Este campo es requerido</span>}
-                    </FormField>
-                    <FormField>
-                        <label htmlFor="password">Contraseña:</label>
-                        <Input type="password" id="password" {...register("password", { required: true })} />
-                        {errors.password && <span>Este campo es requerido</span>}
-                    </FormField>
-                    <Button type="submit" title="Guardar" />
-                </form>
-            </Card>
-        </Container>
+        <>
+            <GuestMenu />
+            <Container>
+                <Card title="Iniciar sesión" className="mx-5 my-5">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <FormField>
+                            <label htmlFor="email">Email:</label>
+                            <Input type="text" id="email" {...register("email", { required: true })} />
+                            {errors.email && <span>Este campo es requerido</span>}
+                        </FormField>
+                        <FormField>
+                            <label htmlFor="password">Contraseña:</label>
+                            <Input type="password" id="password" {...register("password", { required: true })} />
+                            {errors.password && <span>Este campo es requerido</span>}
+                        </FormField>
+                        <Button type="submit" title="Guardar" />
+                    </form>
+                </Card>
+            </Container>
+        </>
+
     );
 }

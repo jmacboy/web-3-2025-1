@@ -16,5 +16,8 @@ export const URLS = {
         UPDATE: (id: string) => {
             return `/alumnos/${id}`
         }
+    },
+    INSCRIPCIONES: {
+        CREATE: '/inscripciones',
     }
 }
