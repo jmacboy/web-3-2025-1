@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from rest_framework import serializers, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
@@ -25,9 +25,12 @@ class AuthViewSet(viewsets.ViewSet):
     def register(self, request):
         email = request.data.get('email')
         password = request.data.get('password')
+
         if not password or not email:
             return Response({'error': 'El email y la contraseña son requeridos'}, status=400)
         if User.objects.filter(email=email).exists():
             return Response({'error': 'El email ya está en uso'}, status=400)
         user = User.objects.create_user(email, email, password)
+        profesor_group = Group.objects.get(name='Profesor')
+        user.groups.add(profesor_group)
         return Response({'id': user.id, 'email': user.email}, status=201)

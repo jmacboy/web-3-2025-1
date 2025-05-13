@@ -5,7 +5,6 @@ import { Menu } from "../components/Menu";
 import { useAuth } from "../hooks/useAuth";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FormField } from "../components/FormField";
-import { Input } from "../components/Input";
 import { Select } from "../components/Select";
 import { Button } from "../components/Button";
 import { useEffect, useState } from "react";
@@ -18,7 +17,6 @@ type Inputs = {
     materias_id: number[]
 }
 export const InscripcionForm = () => {
-    const navigate = useNavigate()
     useAuth()
     const { id } = useParams<{ id: string }>();
     const {
