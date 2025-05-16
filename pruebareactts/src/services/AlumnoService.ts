@@ -15,7 +15,7 @@ export class AlumnoService {
     }
     getAlumno(id: string): Promise<Alumno> {
         return new Promise<Alumno>((resolve, reject) => {
-            apiClient.get("alumnos/" + id)
+            apiClient.get("alumnos/" + id + "/")
                 .then((response) => {
                     resolve(response.data)
                 })

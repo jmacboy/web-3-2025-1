@@ -11,17 +11,17 @@ export class AuthService {
             axios.post("http://localhost:8000/api/token/", {
                 username: username,
                 password: password
-            }).then((response) => {
+            }, { withCredentials: true }).then((response) => {
                 resolve(response.data)
             }).catch((error) => {
                 reject(new Error("Error al iniciar sesión: " + error.message))
             })
         });
     }
-    refreshToken(refresh: string): Promise<RefreshTokenResponse> {
+    refreshToken(): Promise<RefreshTokenResponse> {
         return new Promise<RefreshTokenResponse>((resolve, reject) => {
-            axios.post("http://localhost:8000/api/token/refresh/", {
-                refresh: refresh
+            axios.post("http://localhost:8000/api/refresh/", {}, {
+                withCredentials: true
             }).then((response) => {
                 resolve(response.data)
             }).catch((error) => {
@@ -29,6 +29,16 @@ export class AuthService {
             })
         });
     }
+    logout(): Promise<void> {
+        return new Promise<void>((resolve, reject) => {
+            apiClient.post("http://localhost:8000/auth/logout/").then((response) => {
+                resolve(response.data)
+            }).catch((error) => {
+                reject(new Error("Error al cerrar sesión: " + error.message))
+            })
+        });
+    }
+
     register(email: string, password: string): Promise<RegisterResponse> {
         return new Promise<RegisterResponse>((resolve, reject) => {
             axios.post("http://localhost:8000/universidad/auth/register/", {

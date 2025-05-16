@@ -15,7 +15,7 @@ export class MateriaService {
     }
     getMateria(id: string): Promise<Materia> {
         return new Promise<Materia>((resolve, reject) => {
-            apiClient.get("materias/" + id)
+            apiClient.get("materias/" + id + "/")
                 .then((response) => {
                     resolve(response.data)
                 })

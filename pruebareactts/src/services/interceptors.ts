@@ -7,13 +7,10 @@ const apiClient = axios.create({
         "Content-Type": "application/json",
         "Accept": "application/json"
     },
+    withCredentials: true
 });
 //cuando la petición se va a enviar a la API, se ejecuta este interceptor
 apiClient.interceptors.request.use(function (config) {
-    const token = localStorage.getItem("access_token");
-    if (token) {
-        config.headers["Authorization"] = `Bearer ${token}`;
-    }
     return config;
 }, function (error) {
     console.error("Error en la solicitud a la API: ", error);
@@ -25,8 +22,7 @@ apiClient.interceptors.response.use(function (response) {
 }, async function (error) {
     if (error.response.status === 401) {
         try {
-            const tokenResponse = await new AuthService().refreshToken(localStorage.getItem("refresh_token")!)
-            localStorage.setItem("access_token", tokenResponse.access);
+            await new AuthService().refreshToken()
         } catch (authError) {
             if (window.location.pathname !== '/login') {
                 window.location.href = '/login';
