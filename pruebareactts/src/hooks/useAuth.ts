@@ -12,13 +12,16 @@ export const useAuth = () => {
     const email = useAppSelector((state) => state.auth.email)
     const doLogin = (params: LoginParams) => {
         dispatch(loginUser(params.email))
-        localStorage.setItem("access_token", params.access_token);
-        localStorage.setItem("refresh_token", params.refresh_token);
     }
     const doLogout = () => {
-        dispatch(logoutUser())
-        localStorage.removeItem("access_token");
-        localStorage.removeItem("refresh_token");
+        new AuthService()
+            .logout()
+            .then(() => {
+                dispatch(logoutUser())
+            })
+            .catch((error) => {
+                console.error("Error al cerrar sesión: ", error)
+            })
     }
     useEffect(() => {
         new AuthService()
