@@ -5,4 +5,5 @@ export interface Alumno {
     edad: number;
     fecha_nacimiento: string;
     registro: string;
+    profile_picture: FileList;
 }

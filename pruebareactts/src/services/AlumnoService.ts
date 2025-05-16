@@ -27,12 +27,24 @@ export class AlumnoService {
 
     insertAlumno(alumno: Alumno): Promise<Alumno> {
         return new Promise<Alumno>((resolve, reject) => {
-            apiClient.post("alumnos/", alumno)
+            const formData = new FormData()
+            formData.append("nombres", alumno.nombres)
+            formData.append("apellidos", alumno.apellidos)
+            formData.append("edad", alumno.edad.toString())
+            formData.append("fecha_nacimiento", alumno.fecha_nacimiento)
+            formData.append("registro", alumno.registro)
+            const file = alumno.profile_picture[0]
+            formData.append("profile_picture", file)
+            apiClient.post("alumnos/", formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data"
+                }
+            })
                 .then((response) => {
                     resolve(response.data)
                 })
                 .catch((error) => {
-                    reject(new Error("Error al insertar la alumno: " + error.message))
+                    reject(new Error("Error al insertar el alumno: " + error.message))
                 })
         })
     }

@@ -7,3 +7,4 @@ class Alumno(models.Model):
     edad = models.IntegerField()
     fecha_nacimiento = models.DateField()
     registro = models.CharField(max_length=20)
+    profile_picture = models.ImageField(upload_to='profile_pictures/')

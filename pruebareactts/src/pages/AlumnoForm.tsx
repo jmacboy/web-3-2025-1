@@ -11,13 +11,15 @@ import { useEffect } from "react";
 import { Menu } from "../components/Menu";
 import { Container } from "../components/Container";
 import { useAuth } from "../hooks/useAuth";
+import { FileInput } from "../components/FileInput";
 
 type Inputs = {
     nombres: string
     apellidos: string,
     edad: number,
     fecha_nacimiento: string,
-    registro: string
+    registro: string,
+    profile_picture: FileList,
 }
 export const AlumnoForm = () => {
     const navigate = useNavigate()
@@ -37,7 +39,8 @@ export const AlumnoForm = () => {
             apellidos: data.apellidos,
             edad: data.edad,
             fecha_nacimiento: data.fecha_nacimiento,
-            registro: data.registro
+            registro: data.registro,
+            profile_picture: data.profile_picture
         }
         if (id) {
             updateAlumno(alumno)
@@ -122,6 +125,11 @@ export const AlumnoForm = () => {
                             <label htmlFor="registro">Registro:</label>
                             <Input id="registro" type="text" {...register("registro", { required: true })} />
                             {errors.registro && <span>Este campo es requerido</span>}
+                        </FormField>
+                        <FormField>
+                            <label htmlFor="profile_picture">Foto de perfil:</label>
+                            <FileInput id="profile_picture" type="file" {...register("profile_picture", { required: true })} />
+                            {errors.profile_picture && <span>Este campo es requerido</span>}
                         </FormField>
                         <Button type="submit" title="Guardar" />
                     </form>

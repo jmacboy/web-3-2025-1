@@ -6,6 +6,7 @@ djangorestframework==3.16.0
 djangorestframework-api-key==2.3.0
 djangorestframework_simplejwt==5.5.0
 Markdown==3.7
+pillow==11.2.1
 PyJWT==2.9.0
 sqlparse==0.5.3
 tzdata==2025.2
