@@ -12,3 +12,6 @@ class MateriaSerializer(serializers.ModelSerializer):
 class MateriaViewSet(viewsets.ModelViewSet):
     queryset = Materia.objects.all()
     serializer_class = MateriaSerializer
+    filterset_fields = ['nombre', 'codigo', 'creditos']
+    search_fields = ['nombre', 'codigo']
+    ordering_fields = ['nombre', 'codigo', 'creditos']

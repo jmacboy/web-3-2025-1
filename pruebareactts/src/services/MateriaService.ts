@@ -1,10 +1,10 @@
-import { Materia } from "../models/Materia"
+import { Materia, MateriaPage } from "../models/Materia"
 import apiClient from "./interceptors"
 
 export class MateriaService {
-    getMaterias(): Promise<Array<Materia>> {
-        return new Promise<Array<Materia>>((resolve, reject) => {
-            apiClient.get("materias/")
+    getMaterias(page: number): Promise<MateriaPage> {
+        return new Promise<MateriaPage>((resolve, reject) => {
+            apiClient.get("materias/?page=" + page + "&ordering=nombre")
                 .then((response) => {
                     resolve(response.data)
                 })

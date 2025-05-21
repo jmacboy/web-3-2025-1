@@ -4,3 +4,9 @@ export interface Materia {
     codigo: string;
     creditos: number;
 }
+export interface MateriaPage {
+    count: number;
+    next: string;
+    previous: null;
+    results: Materia[];
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Card } from "../components/Card";
 import { Table } from "../components/Table";
-import { Materia } from "../models/Materia";
+import { Materia, MateriaPage } from "../models/Materia";
 import { MateriaService } from "../services/MateriaService";
 import { Button } from "../components/Button";
 import { useNavigate } from "react-router";
@@ -9,30 +9,38 @@ import { URLS } from "../navigation/CONTANTS";
 import { Menu } from "../components/Menu";
 import { Container } from "../components/Container";
 import { useAuth } from "../hooks/useAuth";
+import { Pagination } from "../components/Pagination";
 
 const MateriaList = () => {
     const navigate = useNavigate()
     useAuth()
 
     const [materias, setMaterias] = useState<Array<Materia>>([]);
-    const getMateriaList = () => {
-        new MateriaService().getMaterias()
+    const [currentPage, setCurrentPage] = useState(1)
+    const [itemsCount, setItemsCount] = useState(0)
+    const getMateriaList = (page: number) => {
+        new MateriaService().getMaterias(page)
             .then((response) => {
-                setMaterias(response);
+                setMaterias(response.results);
+                setItemsCount(response.count);
             })
             .catch((error) => {
                 console.error("Error al obtener las materias: ", error);
             });
     }
     useEffect(() => {
-        getMateriaList()
+        const params = new URLSearchParams(window.location.search);
+        const page = params.get('page');
+        const pageNo = parseInt(page ? page.toString() : "1")
+        setCurrentPage(pageNo)
+        getMateriaList(pageNo)
     }, [])
     const deleteMateria = (id: string) => {
         const confirmation = window.confirm("¿Está seguro de que desea eliminar esta materia?");
         if (!confirmation) return;
         new MateriaService().deleteMateria(id)
             .then(() => {
-                getMateriaList()
+                getMateriaList(currentPage)
             })
             .catch((error) => {
                 console.error("Error al eliminar la materia: ", error);
@@ -73,6 +81,19 @@ const MateriaList = () => {
                             ))}
                         </tbody>
                     </Table>
+                    <Pagination
+                        itemCount={itemsCount}
+                        page={currentPage}
+                        pageSize={2}
+                        onPageChange={(page) => {
+                            setCurrentPage(page)
+                            console.log(page)
+                            getMateriaList(page)
+                            const url = new URL(window.location);
+                            url.searchParams.set('page', page.toString());
+                            window.history.pushState({}, '', url);
+                        }}
+                    ></Pagination>
                 </Card>
             </Container>
         </>
