@@ -6,9 +6,6 @@ const cookieParser = require('cookie-parser')
 const app = express();
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser())
 
 
 app.use(cors({
@@ -28,7 +25,7 @@ app.use(cors({
     ]
 }))
 
-require('./routes/auth.routes')(app);
+
 const onProxyReq = async function (proxyReq, req, res) {
     const token = req.cookies.access;
     if (token) {
@@ -49,6 +46,11 @@ const apiProxy = createProxyMiddleware({
 const port = 3000;
 
 app.use('/webproxy', apiProxy);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser())
+require('./routes/auth.routes')(app);
 
 app.listen(port, () => {
     console.log(`Proxy server is running at http://localhost:${port}`);
