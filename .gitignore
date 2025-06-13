@@ -172,3 +172,6 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
+Practicadotnet/Practicadotnet/bin/
+Practicadotnet/Practicadotnet/obj/
+socketnode/node_modules/
