@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Practicadotnet.Data;
+using Practicadotnet.Dtos;
 using Practicadotnet.Models;
 
 namespace Practicadotnet.Controllers
@@ -23,9 +24,23 @@ namespace Practicadotnet.Controllers
 
         // GET: api/Materias
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Materia>>> GetMateria()
+        public async Task<ActionResult<IEnumerable<object>>> GetMateria()
         {
-            return await _context.Materia.ToListAsync();
+            return await _context.Materia
+                .Select(x => new
+                {
+                    x.Id,
+                    x.Nombre,
+                    x.Semestre,
+                    x.Creditos,
+                    Docente = new
+                    {
+                        x.Docente.Id,
+                        x.Docente.Nombre,
+                        x.Docente.Apellido
+                    }
+                })
+                .ToListAsync();
         }
 
         // GET: api/Materias/5
@@ -76,8 +91,20 @@ namespace Practicadotnet.Controllers
         // POST: api/Materias
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Materia>> PostMateria(Materia materia)
+        public async Task<ActionResult<Materia>> PostMateria(MateriaDto materiaDto)
         {
+            Docente? docente = await _context.Docente.FindAsync(materiaDto.Docente_Id);
+            if (docente == null)
+            {
+                return NotFound("Docente not found");
+            }
+            Materia materia = new Materia
+            {
+                Nombre = materiaDto.Nombre,
+                Creditos = materiaDto.Creditos,
+                Semestre = materiaDto.Semestre,
+                Docente = docente
+            };
             _context.Materia.Add(materia);
             await _context.SaveChangesAsync();
 
