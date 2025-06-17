@@ -15,5 +15,6 @@ namespace Practicadotnet.Data
         }
 
         public DbSet<Practicadotnet.Models.Persona> Persona { get; set; } = default!;
+        public DbSet<Practicadotnet.Models.Materia> Materia { get; set; } = default!;
     }
 }

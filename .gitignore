@@ -175,3 +175,5 @@ cython_debug/
 pruebarestframework/profile_pictures/
 Practicadotnet/Practicadotnet/bin/
 Practicadotnet/Practicadotnet/obj/
+socketnode/node_modules/
+Practicadotnet/.vs/
