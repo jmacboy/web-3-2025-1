@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Practicadotnet.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Practicadotnet.Data
 {
-    public class PracticadotnetContext : DbContext
+    public class PracticadotnetContext : IdentityDbContext<IdentityUser>
     {
         public PracticadotnetContext (DbContextOptions<PracticadotnetContext> options)
             : base(options)

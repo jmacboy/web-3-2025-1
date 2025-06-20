@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\repos\\web-3-2025-1\\Practicadotnet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\controllers\\materiascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\controllers\\materiascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,24 +15,48 @@
       "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\controllers\\docentescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\dtos\\docentedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\dtos\\docentedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\models\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\models\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\dtos\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\dtos\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\dtos\\materiadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\dtos\\materiadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\models\\materia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\models\\materia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\dtos\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\dtos\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\data\\practicadotnetcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\data\\practicadotnetcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\controllers\\materiascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\controllers\\materiascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\models\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\models\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\models\\materia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|solutionrelative:practicadotnet\\models\\materia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B1A65C4-91F6-47FC-AE77-9F52C7EF4AB7}|Practicadotnet\\Practicadotnet.csproj|c:\\repos\\web-3-2025-1\\practicadotnet\\practicadotnet\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,50 +86,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DocenteDto.cs",
-              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\DocenteDto.cs",
-              "RelativeDocumentMoniker": "Practicadotnet\\Dtos\\DocenteDto.cs",
-              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\DocenteDto.cs",
-              "RelativeToolTip": "Practicadotnet\\Dtos\\DocenteDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Practicadotnet\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Practicadotnet\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAuwCIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T18:47:49.413Z",
+              "WhenOpened": "2025-06-20T18:25:34.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DocentesController.cs",
-              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\DocentesController.cs",
-              "RelativeDocumentMoniker": "Practicadotnet\\Controllers\\DocentesController.cs",
-              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\DocentesController.cs",
-              "RelativeToolTip": "Practicadotnet\\Controllers\\DocentesController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAUwDAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T18:47:27.315Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\appsettings.json",
+              "RelativeDocumentMoniker": "Practicadotnet\\appsettings.json",
+              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\appsettings.json",
+              "RelativeToolTip": "Practicadotnet\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-20T18:20:43.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "MateriaDto.cs",
               "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\MateriaDto.cs",
               "RelativeDocumentMoniker": "Practicadotnet\\Dtos\\MateriaDto.cs",
               "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\MateriaDto.cs",
               "RelativeToolTip": "Practicadotnet\\Dtos\\MateriaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-17T18:43:05.423Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Docente.cs",
               "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Models\\Docente.cs",
               "RelativeDocumentMoniker": "Practicadotnet\\Models\\Docente.cs",
@@ -118,33 +142,124 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "PracticadotnetContext.cs",
               "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Data\\PracticadotnetContext.cs",
               "RelativeDocumentMoniker": "Practicadotnet\\Data\\PracticadotnetContext.cs",
               "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Data\\PracticadotnetContext.cs",
               "RelativeToolTip": "Practicadotnet\\Data\\PracticadotnetContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-17T17:55:49.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "DocenteDto.cs",
+              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\DocenteDto.cs",
+              "RelativeDocumentMoniker": "Practicadotnet\\Dtos\\DocenteDto.cs",
+              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\DocenteDto.cs",
+              "RelativeToolTip": "Practicadotnet\\Dtos\\DocenteDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T18:47:49.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Practicadotnet\\Services\\TokenService.cs",
+              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Services\\TokenService.cs",
+              "RelativeToolTip": "Practicadotnet\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T18:22:58.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DocentesController.cs",
+              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\DocentesController.cs",
+              "RelativeDocumentMoniker": "Practicadotnet\\Controllers\\DocentesController.cs",
+              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\DocentesController.cs",
+              "RelativeToolTip": "Practicadotnet\\Controllers\\DocentesController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAUwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T18:47:27.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Program.cs",
+              "RelativeDocumentMoniker": "Practicadotnet\\Program.cs",
+              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Program.cs",
+              "RelativeToolTip": "Practicadotnet\\Program.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAwwFYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T18:40:07.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegisterRequestDto.cs",
+              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\RegisterRequestDto.cs",
+              "RelativeDocumentMoniker": "Practicadotnet\\Dtos\\RegisterRequestDto.cs",
+              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\RegisterRequestDto.cs",
+              "RelativeToolTip": "Practicadotnet\\Dtos\\RegisterRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T18:26:24.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "Practicadotnet\\Dtos\\LoginRequestDto.cs",
+              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\LoginRequestDto.cs",
+              "RelativeToolTip": "Practicadotnet\\Dtos\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T18:28:45.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "Practicadotnet\\Dtos\\AuthResponseDto.cs",
+              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Dtos\\AuthResponseDto.cs",
+              "RelativeToolTip": "Practicadotnet\\Dtos\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T18:29:34.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "MateriasController.cs",
               "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\MateriasController.cs",
               "RelativeDocumentMoniker": "Practicadotnet\\Controllers\\MateriasController.cs",
               "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\MateriasController.cs",
               "RelativeToolTip": "Practicadotnet\\Controllers\\MateriasController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAIwCgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAIwFwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-17T17:54:10.87Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Materia.cs",
               "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Models\\Materia.cs",
               "RelativeDocumentMoniker": "Practicadotnet\\Models\\Materia.cs",
@@ -157,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "Persona.cs",
               "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Models\\Persona.cs",
               "RelativeDocumentMoniker": "Practicadotnet\\Models\\Persona.cs",
@@ -170,20 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Program.cs",
-              "RelativeDocumentMoniker": "Practicadotnet\\Program.cs",
-              "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Program.cs",
-              "RelativeToolTip": "Practicadotnet\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T18:40:07.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Practicadotnet\\Controllers\\HomeController.cs",
@@ -196,20 +298,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "PersonasController.cs",
               "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\PersonasController.cs",
               "RelativeDocumentMoniker": "Practicadotnet\\Controllers\\PersonasController.cs",
               "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\PersonasController.cs",
               "RelativeToolTip": "Practicadotnet\\Controllers\\PersonasController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAABBwAoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T19:01:25.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "Practicadotnet\\WeatherForecast.cs",
@@ -222,13 +324,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "Practicadotnet\\Controllers\\WeatherForecastController.cs",
               "ToolTip": "C:\\repos\\web-3-2025-1\\Practicadotnet\\Practicadotnet\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "Practicadotnet\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAABBwBUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T18:22:14.851Z",
               "EditorCaption": ""
